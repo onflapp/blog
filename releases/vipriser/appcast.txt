@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>VipRiser's Changelog</title>
+    <link>http://onflapp.appspot.com/vipriser</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <item>
+        <title>Version 3.0</title>
+        <sparkle:releaseNotesLink>https://www.dropbox.com/s/eq2tqzysph5kh46/VipRiser.html?dl=1</sparkle:releaseNotesLink>
+        <pubDate>Sun, 03 Mar 2019 09:26:35 +0000</pubDate>
+        <enclosure url="https://www.dropbox.com/s/mh28d13vfpte4te/VipRiser.zip?dl=1" sparkle:version="3.0" length="6531240" type="application/octet-stream" sparkle:dsaSignature="MC0CFD8xKW5yTdROINbe1oKRArnrXpWHAhUAkRvqet0kGza+I66oiPnCZLfRT0o=" />
+    </item>
+</channel>
+</rss>
