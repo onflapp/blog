@@ -8,8 +8,8 @@
     <item>
         <title>Version 3.0</title>
         <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/vipriser/VipRiser.html</sparkle:releaseNotesLink>
-        <pubDate>Sun, 24 Mar 2019 13:27:19 +0000</pubDate>
-        <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.0" length="7766432" type="application/octet-stream" sparkle:dsaSignature="MCwCFFVamKtf8b48JMruCcYO6NdEVMkVAhQ3EoK8rSu16aQ8O3Os1GAXnldj2Q==" />
+        <pubDate>Sun, 24 Mar 2019 13:31:16 +0000</pubDate>
+        <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.0" length="7766311" type="application/octet-stream" sparkle:dsaSignature="MC0CFBQKKi5CCxhwu8pWtOZWT6L+VzxYAhUArTbyi379WWEQp/LHlJjPQIEpGHM=" />
     </item>
 </channel>
 </rss>
