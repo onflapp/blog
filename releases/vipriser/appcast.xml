@@ -6,10 +6,10 @@
     <description>Most recent changes with links to updates.</description>
     <language>en</language>
     <item>
-        <title>Version 3.3</title>
+        <title>Version 3.4</title>
         <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/vipriser/VipRiser.html</sparkle:releaseNotesLink>
-        <pubDate>Tue, 13 Aug 2019 08:59:35 +0000</pubDate>
-        <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.3" length="7827031" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCKhuAUq0FeM4i82TTOiMxyDHto8QIUOnm8sUHkYBvZpv4y6qOwfbn8Noc=" />
+        <pubDate>Mon, 04 Nov 2019 18:53:51 +0000</pubDate>
+        <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.4" length="7872958" type="application/octet-stream" sparkle:dsaSignature="MCwCFH/pQKAoiczofv3Pmu/RyikoPsxiAhRXaGE4HTKjgVs+RdCibibhSP0+6g==" />
     </item>
 </channel>
 </rss>
