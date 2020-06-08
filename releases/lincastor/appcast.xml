@@ -8,8 +8,8 @@
 <item>
 <title>Version 2.3</title>
 <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/lincastor/LinCastor.html</sparkle:releaseNotesLink>
-<pubDate>Mon, 08 Jun 2020 14:24:34 +0000</pubDate>
-<enclosure url="https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip" sparkle:version="2.3" length="4210250" type="application/octet-stream" sparkle:dsaSignature="MC0CFQCbMuyDflJWdL9Rqa4qYouTPdel6gIUYVBrEqXJtTPzfyzCxnF1HAmuJUM=" />
+<pubDate>Mon, 08 Jun 2020 14:29:55 +0000</pubDate>
+<enclosure url="https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip" sparkle:version="2.3" length="4210375" type="application/octet-stream" sparkle:dsaSignature="MCwCFEsdoFqs0fuecnNLMFJAx7rIDRHVAhR+rDd+VDHkZhB50aipA+pP3jsenw==" />
 </item>
 </channel>
 </rss>
