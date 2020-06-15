@@ -12,7 +12,7 @@
 
 	
 
-	<title>Handle Custom URL Schemes or File Extensions &#8211; OnFlApp Blog</title>
+	<title>Modifying URL patterns &#8211; OnFlApp Blog</title>
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <script data-cfasync="false" data-pagespeed-no-defer type="text/javascript">//<![CDATA[
@@ -28,7 +28,7 @@
 <link rel='stylesheet' id='wp-block-library-theme-css'  href='../shared/69eee8b43fae64d00238f97db4493877.css' type='text/css' media='all' />
 <link rel='stylesheet' id='primer-css'  href='../shared/51061d38cfdcc17f957d3c0e27d9528b.css' type='text/css' media='all' />
 <style id='primer-inline-css' type='text/css'>
-.site-header{background-image:url(../shared/74ddcef4d715db671ed8344b36346801.png);}
+.site-header{background-image:url(../shared/e8aff13a90f1680b1f955d5d224f1651.jpg);}
 .site-title a,.site-title a:visited{color:#ffffff;}.site-title a:hover,.site-title a:visited:hover{color:rgba(255, 255, 255, 0.8);}
 .site-description{color:#a8a8a8;}
 .hero,.hero .widget h1,.hero .widget h2,.hero .widget h3,.hero .widget h4,.hero .widget h5,.hero .widget h6,.hero .widget p,.hero .widget blockquote,.hero .widget cite,.hero .widget table,.hero .widget ul,.hero .widget ol,.hero .widget li,.hero .widget dd,.hero .widget dt,.hero .widget address,.hero .widget code,.hero .widget pre,.hero .widget .widget-title,.hero .page-header h1{color:#ffffff;}
@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		
 </head>
 
-<body class="page-template-default page page-id-1026 page-child parent-pageid-952 custom-header-image layout-two-column-default">
+<body class="page-template-default page page-id-1275 page-child parent-pageid-952 custom-header-image layout-two-column-default">
 
 	
 	<div id="page" class="hfeed site">
@@ -173,7 +173,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<header class="page-header">
 
-		<h1 class="page-title">Handle Custom URL Schemes or File Extensions</h1>
+		<h1 class="page-title">Modifying URL patterns</h1>
 	</header><!-- .entry-header -->
 
 </div><!-- .page-title-container -->
@@ -185,86 +185,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<main id="main" class="site-main" role="main">
 
 		
-<article id="post-1026" class="post-1026 page type-page status-publish has-post-thumbnail hentry">
+<article id="post-1275" class="post-1275 page type-page status-publish hentry">
 
 	
 	
 <div class="page-content">
 
 	
-<p>LinCastor Browser will handle <strong>http or https out of the box</strong>. However, the app itself is flexible enough to handle other type of links or even files.</p>
+<h3>Using Variables</h3>
 
 
 
-<p>Due to sandbox restrictions, Apple app store apps are not allowed to register custom URL scheme on its own. Helper app needs to be used to do it on its behalf.</p>
+<p>Sometimes you may need to replace part of an URL or construct new. In LinCastor Browser you can do this either by&nbsp;<a href="../lincastor-browser/lincastor-browser-plugins.html">writing a plugin extension</a>&nbsp;or by creating new URL from variables.</p>
 
 
 
-<p>This is where <a href="../lincastor-browser/lincastor.html"><strong>LinCastor</strong></a> comes to help. LinCastor is actually older, more “geeky” brother of LinCastor Browser. It enables you to register your own custom URL scheme (e.g. mylink://foo/bar) and associate it with an application, shell, or AppleScript handler. It will also handle file extensions. </p>
+<p>You can use any variable that an extension or rules could use.</p>
 
 
 
-<h3>Register Custom URL Scheme</h3>
+<pre class="wp-block-preformatted">URL&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =&gt; my-http://myhost.domain.com:8080/mysite/a.html?search=blah#myanchor
+URL_SCHEME &nbsp; =&gt; my-http
+URL_HOST &nbsp; &nbsp; =&gt; myhost.domain.com
+URL_PORT &nbsp; &nbsp; =&gt; 8080
+URL_PATH &nbsp; &nbsp; =&gt; /mysite/a.html
+URL_PATH_EXT&nbsp; =&gt; html
+...</pre>
 
 
 
-<p class="has-normal-font-size">Download and Install <a href="../lincastor-browser/lincastor.html"><strong>LinCastor</strong></a> helper app.</p>
+<p>For complete list of variables see <a href="https://onflapp.github.io/LinCastorBrowserPlugins/">here</a>.</p>
 
 
 
-<p>Launch LinCastor and create new scheme or extension using its user interface.</p>
+<h4>NOTE: variables are not encoded by default</h4>
 
 
 
-<p>Choose “Show Menu” as handler. This will pass URL with this scheme directly to LinCastor Browser.</p>
+<p>Use <strong>X_</strong> variable prefix to return encoded value. This is very useful if you want to pass value as part of URL&#8217;s query string.</p>
 
 
 
-<figure class="wp-block-image size-large"><img src="../shared/8011cb02e0ebebbfc83c72419241f031.png" alt="" class="wp-image-1084" srcset="../shared/8011cb02e0ebebbfc83c72419241f031.png 898w,../shared/cd1fa802107d32e1db0d9fdb22f8952f.png 300w,../shared/48e7de0b919e581e0c345b8da5d5afab.png 768w" sizes="(max-width: 898px) 100vw, 898px" /></figure>
+<h3>Using **** placeholder</h3>
 
 
 
-<p>Remember to&nbsp;<strong>Save and Activate.</strong></p>
+<p>The **** placeholder text will be replaced by any selected text. This is equivalent of using &nbsp;<em>${TEXT}</em>&nbsp;variable. This makes a lot of sense for lookup URLs where you want to pass current text selection to a website (e.g. google search).</p>
 
 
 
-<h3>Handle the URL in LinCastor Browser</h3>
+<h3>Replacing part of URL</h3>
 
 
 
-<p>LinCastor will pass the URL directly to LinCastor Browser, so can configure it the same way as you would with standard HTTP link.&nbsp;<em>Browser menu</em>&nbsp;to select app to open the URL with or&nbsp;<em>Single App</em>&nbsp;to associate the URL with specific app.</p>
+<p>Some apps are no able to handle standard HTTP or HTTPS links directly and use custom schemes instead. For example, Zoom app needs <strong>zoommtg</strong>. You can construct new URL by replacing URL_SCHEME (&#8220;https&#8221;) by value &#8220;zoommtg&#8221; and passing it to the Zoom app to open it.</p>
 
 
 
-<p>The matching rule would most likely look for your custom scheme, but you can combine it with other rules as well.</p>
-
-
-
-<figure class="wp-block-image size-large"><img src="../shared/201a053db0769a2f8f5a0190dd1c35f4.png" alt="" class="wp-image-1085" srcset="../shared/201a053db0769a2f8f5a0190dd1c35f4.png 750w,../shared/32bd30da2b49ce3b33217f24f4ac993b.png 300w,../shared/4be84d60d4adff134773c5aa93cea4cc.png 150w" sizes="(max-width: 750px) 100vw, 750px" /></figure>
-
-
-
-<h3>Handling File Extensions</h3>
-
-
-
-<p>The file extensions works exactly the same way as custom URL schemes. You registered them in LinCastor and pass them to LinCastor Browser for further processing.</p>
-
-
-
-<figure class="wp-block-image size-large"><img src="../shared/b6275030815c3936c7c8965248dabbef.png" alt="" class="wp-image-1087" srcset="../shared/b6275030815c3936c7c8965248dabbef.png 565w,../shared/bac7d6e5f2b6107bf3f8f9872e664ab4.png 300w" sizes="(max-width: 565px) 100vw, 565px" /></figure>
-
-
-
-<p>LinCastor Browser includes&nbsp;<em>File Name Extension&nbsp;</em>to make matching agains file extensions super easy.</p>
-
-
-
-<h3>Other Ways of Doing it</h3>
-
-
-
-<p>Alternative to using LinCastor is to make LinCastor Browser default app for given file or URL (usually for known types/schemes) using&nbsp;<em>Get Info</em>&nbsp;in Finder.&nbsp;<a href="http://www.rubicode.com/Software/RCDefaultApp/">RCDefaultApp</a>&nbsp;or similar app could work as well, but I never tried it.</p>
+<figure class="wp-block-image size-large"><img src="../shared/d0b4bf035eaa1206c0a30c2f42b55258.png" alt="" class="wp-image-1282" srcset="../shared/d0b4bf035eaa1206c0a30c2f42b55258.png 449w,../shared/5e522ac30e7850566ea6871b90f96d3f.png 300w" sizes="(max-width: 449px) 100vw, 449px" /></figure>
 
 </div><!-- .page-content -->
 
