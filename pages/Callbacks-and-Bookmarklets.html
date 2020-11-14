@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" href="shared/style.css">
+</head>
+<body>
+<header>
+<nav>
+
+<ul>
+<li><a href="LinCastor.html">LinCastor</a>
+
+<ul>
+<li><a href="moe.html">More information</a></li>
+<li><a href="d.html">something else</a>
+
+<ul>
+<li><a href="moe.html">More information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="BookMarkable.html">BookMarkable</a>
+
+<ul>
+<li><a href="d.html">one</a></li>
+<li><a href="d.html">two</a></li>
+</ul>
+</li>
+</ul>
+
+
+</nav>
+</header>
+<article>
+<p>Callbacks</p>
+
+<p>LinCastor Browser will handle certain URL in special way.</p>
+
+<p>http-safari://, http-firefox://, http-chrome://</p>
+
+<p>LinCastor Browser will forward this kind of url to the respective browser directly, bypassing any rule or configuration.
+For example, https-firefox://www.wikipedia.org will launch the link with Firefox browser.</p>
+
+<p>lc://lookup</p>
+
+<p>lookup text in LinCastor. This is the same as selectiong a text and invoking lookup using service menu or using dialog.</p>
+
+<p>examples:
+<code>
+ lc://lookup?text=hello
+</code></p>
+
+<p>lc://open</p>
+
+<p>open link in LinCastor Browser</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span>?app_keywords=<span style="color: rgb(51, 51, 51); font-weight: bold;">ref</span>&amp;url=https:<span style="color: rgb(0, 153, 38);">//www</span>.wikipedia.org
+ <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span><span style="color: rgb(0, 153, 38);">/http:/</span><span style="color: rgb(0, 153, 38);">/www.wikipedia.org
+</span></code></pre>
+
+<p>Alternative is to use http scheme. This is sometimes necessary for applications which will not recognize lc:// (e.g. MS Word or MS Excel).</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open/http://www.wikipedia.org</span>
+ http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open?url=http://www.wikipedia.org</span>
+</code></pre>
+
+<p>Bookmarklets</p>
+
+<p>Many browsers, including Chrome, Firefox and Safari support ability to create bookmarklets. Bookmarklets can invoke javascript functionality right within current page, which enables the bookmarklet to pass information to the LinCastor Browser.</p>
+
+<p>For example:</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">javascript:function<span style="color: rgb(0, 128, 128);">%20x</span>()<span style="color: rgb(0, 128, 128);">%7Bwindow</span>.location=<span style="color: rgb(221, 17, 68);">'lc://open?url='</span>+escape(document.URL);<span style="color: rgb(0, 128, 128);">%7Dx</span>();
+</code></pre>
+
+<p>will pass the current document URL to the LinCastor Browser.</p>
+
+<p>TIP: to add bookmarklet to your browser</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span style="color: rgb(0, 128, 128);">1</span>   add bookmark
+<span style="color: rgb(0, 128, 128);">2</span>   paste <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> the “javascript:....<span style="color: rgb(221, 17, 68);">" stuff as link
+</span></code></pre>
+
+<p>Bookmarkets with LinCastor</p>
+
+<p><a href="LinCastor.html">LinCastor</a> (the helper app) has ability to create bookmarklets, including the ones using custom URL schemes, using easy to use user interface.</p>
+
+<p><img src="shared/4efe573e90ef807d-dc9a4b1f6a0d9b6cbc0c722b7aaebf90.png" alt=""></p></article>
+<footer>
+this is my foot
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" href="shared/style.css">
+</head>
+<body>
+<header>
+<nav>
+
+<ul>
+<li><a href="LinCastor.html">LinCastor</a>
+
+<ul>
+<li><a href="moe.html">More information</a></li>
+<li><a href="d.html">something else</a>
+
+<ul>
+<li><a href="moe.html">More information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="BookMarkable.html">BookMarkable</a>
+
+<ul>
+<li><a href="d.html">one</a></li>
+<li><a href="d.html">two</a></li>
+</ul>
+</li>
+</ul>
+
+
+</nav>
+</header>
+<article>
+<h1>Custom URL handlers</h1>
+
+<p>The LinCastor’s primary job is to wait for an URL request and trigger a handler script which decides what to do next.</p>
+
+<p style="text-align: center;"><img src="shared/a4c1174336e4cb15-screen-shot27859.png" alt=""></p>
+
+<h3>What is an URL ‘scheme’</h3>
+
+<p>Simply said, the URL scheme is the part before ‘:’ character (<a href="http://en.wikipedia.org/wiki/Uniform_Resource_Locator">URL Wikipedia</a>). So scheme of <a href="http://www.google.com/">http://www.google.com</a> is http, or foobar-my-<a href="http://a/b/c/d">http://a/b/c/d</a> is foobar-my-http. The OS X is able to map a scheme to an application. Therefore there can only be one browser application handling all web links at any one time and this is where LinCastor comes useful.</p>
+
+<h3>Registering a scheme</h3>
+
+<ol>
+<li>Set title to anything you like.</li>
+<li>Specify a scheme or list of schemes you want to handle. Adding a well known scheme such as http or ftp may ‘steal‘ it from already installed Application –  you should know what you are doing here. Use characters a-z, 0-9and ‘-‘ for custom scheme name (e.g. foo-bar is ok, whereas My.Url is not).</li>
+<li>Choose a handler:</li>
+</ol>
+
+
+<h3>AppleScript</h3>
+
+<p>Executes handle_run method with a dictionary as argument.</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>on</span> handle_url(arg)
+    display dialog <span style="color: rgb(221, 17, 68);">"handle url: "</span> &amp; |URL| <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> args
+end handle_url
+</code></pre>
+
+<p>The dictionary contains following variables:</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL          =&gt; my-http:<span style="color: rgb(153, 153, 136); font-style: italic;">//myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</span>
+URL_SCHEME   =&gt; my-http
+URL_HOST     =&gt; myhost.domain.com
+URL_PORT     =&gt; <span style="color: rgb(0, 128, 128);">8080</span>
+URL_PATH     =&gt; /mysite/a.html
+URL_QUERY    =&gt; ?search=blah
+URL_FRAGMENT =&gt; <span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
+</code></pre>
+
+<p>Only URL parts that are parseable will appear in the dictionary.
+There is also special variable called URL_VALUE, it will contain anything after ‘:’ character. This is especially useful for URLs that do not comfort to the URL spec e.g. message:<message id=""> urls used by the Apple Mail.
+The url query parameters are parsed in following way:
+?search=blah&amp;flag=2 would become</message></p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL_QUERY_SEARCH =&gt; blah
+URL_QUERY_FLAG =&gt; <span style="color: rgb(0, 128, 128);">2</span>
+</code></pre>
+
+<p>E.i. URL_QUERY_ + parameter name. Note the upper case of the parameter name.</p>
+
+<p>The handler must return 1 when successful or 0 in case of an error.</p>
+
+<h3>Shell Script</h3>
+
+<p>Executes a shell script. The variable names are the same as for the AppleScript handler except that they’ll be passed to the script in form of environmental variables.</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span style="color: rgb(153, 153, 153); font-weight: bold;">#!/bin/bash</span>
+open <span>-a</span> Firefox <span style="color: rgb(0, 128, 128);">$URL</span>
+<span style="color: rgb(51, 51, 51); font-weight: bold;">exit</span> <span style="color: rgb(0, 128, 128);">0</span>
+</code></pre>
+
+<p>The script must exit with value of 0 when successful or non-zero value for an error.</p>
+
+<p>Application – built-in handler</p>
+
+<p>The handler will pass the URL to any application you specify here. Please note that not all applications know how to open an arbitrary URL, therefore it makes the most sense to use this handler in conjunction with  the remove prefix- setting.
+The way this works is that you register well known scheme but prefix it with your own prefix.
+For example, add chrome-http and associate it with application Google Chrome.
+When you request an url with the chrome- prefix (e.g. chrome-<a href="http://gmail.google.com">http://gmail.google.com</a>), it will be passed to the Chrome application with the prefix removed. This allows you to control which application is used to open a particular URL.</p></article>
+<footer>
+this is my foot
+
+</footer>
+</body>
+</html>
