@@ -3,6 +3,7 @@
 <head>
 <title>LinCastor Browser URL patterns and callbacks</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<link rel="stylesheet" href="theme/style.css">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -16,11 +17,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQLPZNT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --><header>
-<p><a href="Index.html"><img src="shared/b18ef225c5e765ce-A53CCFB5-8758-4B2B-A28D-B5F146D2134F.png" alt=""></a></p>
-
 <nav>
 
 <ul>
+<li>[ <a href="Index.html">❖</a> ]</li>
 <li><a href="LinCastorBrowser.html">LinCastor Browser</a>
 
 <ul>
@@ -60,7 +60,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 </header>
 <article>
-<p>Using Variables</p>
+<h1>Using Variables</h1>
 
 <p>Sometimes you may need to replace part of an URL or construct new. In LinCastor Browser you can do this either by <a href="LinCastorBrowser-Plugins.html">writing a plugin extension</a> or by creating new URL from variables.
 You can use any variable that an extension or rules could use.</p>
@@ -76,17 +76,17 @@ URL_PATH_EXT  =&gt; html
 
 <p>For complete list of variables see <a href="https://onflapp.github.io/LinCastorBrowserPlugins/">here</a>.</p>
 
-<p>NOTE: variables are not encoded by default</p>
+<h3>NOTE: variables are not encoded by default</h3>
 
-<p>Use X_ variable prefix to return encoded value. This is very useful if you want to pass value as part of URL’s query string.</p>
+<p>Use <em>X_</em> variable prefix to return encoded value. This is very useful if you want to pass value as part of URL’s query string.</p>
 
-<p>Using **** placeholder</p>
+<h3>Using **** placeholder</h3>
 
 <p>The **** placeholder text will be replaced by any selected text. This is equivalent of using  ${TEXT} variable. This makes a lot of sense for lookup URLs where you want to pass current text selection to a website (e.g. google search).</p>
 
-<p>Replacing part of URL</p>
+<h3>Replacing part of URL</h3>
 
-<p>Some apps are no able to handle standard HTTP or HTTPS links directly and use custom schemes instead. For example, Zoom app needs zoommtg. You can construct new URL by replacing URL_SCHEME (“https") by value “zoommtg" and passing it to the Zoom app to open it.</p>
+<p>Some apps are no able to handle standard HTTP or HTTPS links directly and use custom schemes instead. For example, Zoom app needs <em>zoommtg</em>. You can construct new URL by replacing URL_SCHEME (“https") by value “zoommtg" and passing it to the Zoom app to open it.</p>
 
 <p><img src="shared/83a247e7bf590396-d0b4bf035eaa1206c0a30c2f42b55258.png" alt=""></p></article>
 </body>

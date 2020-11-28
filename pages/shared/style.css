@@ -1,29 +1,38 @@
 body {
   font-family: "Helvetica", Arial, Geneva, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   margin: 10px;
   color: black;
 }
 
-body > article {
-  box-sizing: border-box;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+section {
+  font-size: smaller;
+  color: gray;
+}
+
+dl {
+  font-size: smaller;
+  color: gray;
   padding: 10px;
 }
 
-body > footer {
-  margin-top: 10px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+hr {
+  margin: 25px;
+  border: 1px solid lightgray;
 }
 
-body > header {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+h1 {
+  font-size: xx-large;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: lighter;
+}
+
+h3 {
+  font-size: large;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -43,6 +52,7 @@ strong {
 ul {
   padding-left: 20px;
   list-style-type: square;
+  list-style-position: inside;
 }
 
 a:link {
@@ -51,12 +61,12 @@ a:link {
 }
 
 blockquote {
-  font: 14px/22px normal helvetica, sans-serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin: 0;
+  color: gray;
+  font-size: smaller;
   padding-left: 15px;
-  border-left: 3px solid #ccc;
+  padding-right: 15px;
+  border-left: 15px solid lightgray;
 }
 
 table td, table th {
@@ -80,7 +90,6 @@ img {
  */
 
 nav {
-  background-color: gray;
   color: lightgray;
 }
 
@@ -98,10 +107,12 @@ nav ul {
   list-style-type: none;
   margin: 0;
   margin-top: 10px;
+  z-index: 10;
 }
 
 nav > ul {
   border: initial;
+  white-space: initial;
 }
 
 nav > ul > li > ul {
@@ -630,4 +641,3 @@ div.mermaidTooltip {
   pointer-events: none;
   z-index: 100;
 }
-
