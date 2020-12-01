@@ -55,8 +55,8 @@ ul {
   list-style-position: inside;
 }
 
-a:link {
-  color: blue;
+a:link, a:visited {
+  color: dodgerblue;
   text-decoration: none;
 }
 
