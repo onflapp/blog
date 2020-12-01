@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BookMarkable Support Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet" href="theme/style.css">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MQLPZNT');</script>
+<!-- End Google Tag Manager --><link rel="stylesheet" href="shared/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQLPZNT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><header>
+<nav>
+
+<ul>
+<li>[ <a href="index.html">❖</a> ]</li>
+<li><a href="LinCastorBrowser.html">LinCastor Browser</a>
+
+<ul>
+<li><a href="Custom-URL-Scheme-or-File-Extension.html">Custom URL Schemas and File Extensions</a></li>
+<li><a href="https://github.com/onflapp/LinCastorBrowserPlugins">Sample Plugins</a></li>
+</ul>
+</li>
+<li><a href="VipRiserPDFOps.html">VipRiser PDF Ops</a>
+
+<ul>
+<li><a href="Install-Virtual-Printer.html">PDF Print Driver</a></li>
+<li><a href="Create-PDF-Action.html">Create PDF Workflows</a></li>
+<li><a href="Enable-3rd-Party-Automator-Actions.html">Enable 3rd-party Automator Actions</a></li>
+</ul>
+</li>
+<li><a href="BookMarkable.html">BookMarkable</a>
+
+<ul>
+<li><a href="https://github.com/onflapp/BookMarkablePlugins">Sample Plugins</a></li>
+</ul>
+</li>
+<li><a href="TextSer.html">TextSer</a>
+
+<ul>
+<li><a href="https://github.com/onflapp/TextSerPlugins">Sample Plugins</a></li>
+</ul>
+</li>
+<li><a href="Support.html">Support</a>
+
+<ul>
+<li><a href="LinCastorBrowser-Support.html">LinCastor Browser</a></li>
+<li><a href="VipRiserPDFOps-Support.html">VipRiser PDF Ops</a></li>
+<li><a href="BookMarkable-Support.html">BookMarkable</a></li>
+<li><a href="TextSer-Support.html">TextSer</a></li>
+<li><a href="OnFlApp-Privacy-Policy.html">OnFlApp Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+
+
+</nav>
+</header>
+<article>
+<p>BookMarkable Plugins</p>
+
+<p><a href="https://github.com/onflapp/BookMarkablePlugins">Download Sample Plugins</a>
+Most applications are document-based, which is usually indicated by small file icon in window’s title.</p>
+
+<p><img src="shared/5dbbc6d6e164e42b-4232aea3-eb6e-47e5-b505-e34449753743.png" alt=""></p>
+
+<p>These are documents BookMarkable can reference directly with used of the default plugin (Default.scpt).
+Other application, such as Outlook or Safari require application specific plugin to convert selected record or front-most window into a bookmark. These plugins go into BookMarkable “Scripts" folder. The easiest way to get started, is to <a href="https://github.com/onflapp/BookMarkablePlugins">download sample plugins</a> and copy the ones you want to use in.
+Where do I find the Scripts folder
+The scripts folder is under your home folder Library/Application Scripts/com.onflapp.BookMarkable</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">1   switch to Finder
+2   <span><span style="color: rgb(51, 51, 51); font-weight: bold;">select</span> menu <span style="color: rgb(51, 51, 51); font-weight: bold;">Go</span>, <span style="color: rgb(51, 51, 51); font-weight: bold;">then</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">Go</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">to</span> Folder
+<span style="color: rgb(0, 128, 128);">3</span>   type <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> ~/Library/Application Scripts/com.onflapp.BookMarkable
+</span></code></pre>
+
+<p>If this folder doesn’t exist already, create it.
+How do I use plugins</p>
+
+<p><img src="shared/5dbbc6d6e164e42b-9963feb1-e911-4a1e-97b8-ca9a111ad55c.png" alt=""></p>
+
+<p>Switch to the window of application you want to bookmark. Use ‘Bookmark **** Selection’ menu to invoke the plugin. This is either going to be application specific plugin, if exists, or default plugin otherwise.
+What if it doesn’t work
+Many plugins require ‘application to control your computer’ permission to access application’s state. This permission can be granted by going to System Preferences &gt; Security &amp; Privacy</p>
+
+<p><img src="shared/5dbbc6d6e164e42b-dec9de65-f5d5-421b-99a1-44448949ad02.png" alt=""></p>
+
+<p>How to make my own plugin
+First of all, you should not be afraid of writing AppleScript scripts. The best way to get started is to go to Preferences &gt; Plugins &gt; Install Plugins . Switch to the app you want to create plugin for, switch back to BookMarkable and choose Create script for the last active App ID.</p>
+
+<p><img src="shared/5dbbc6d6e164e42b-55803434-daff-40b2-8b99-bffeeff17ea4.png" alt=""></p>
+
+<p>Edit the script to extract application’s file (as alias) or URL link and pass it to the BookMarkable. This is very application specific. Many applications are actually not AppleScript scriptable at all so you might have to get creative.
+Save the script to ~/Library/Application Scripts/com.onflapp.BookMarkable .
+What’s up with the schemes?
+Some applications, such as Outlook, do not have any useful URL or file to reference. Schemes plugins allow you to create new schemes. Take a look at the com.microsoft.Outlook.scpt which creates outlook-message://messageid URL and open_outlook-message.scpt which handles it. You can also override regular scheme e.g. open_file.scpt allows files to be opened via Finder rather than BookMarkable to bypass its security limitations.</p></article>
+</body>
+</html>

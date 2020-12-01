@@ -65,6 +65,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 </header>
 <article>
-<p><img src="shared/54f7135f9fab368b-screen-shot2876.png" alt=""></p></article>
+<p>Merge multiple PDF files into one file.</p>
+
+<p><img src="shared/54f7135f9fab368b-screen-shot2876.png" alt=""></p>
+
+<h3>merge files sequentially</h3>
+
+<p>This will add all pages of all files one by one and create new PDF file as a result.</p>
+
+<h3>append to existing file</h3>
+
+<p>Similar to merging files, except that all new pages will be added at the end of existing pages. Appending to existing file instead of overwriting it.</p>
+
+<p>You will have to set output folder and name pattern options for a file you want to append to.</p>
+
+<p><img src="shared/54f7135f9fab368b-screen-shot11946.png" alt=""></p>
+
+<h3>interleave individual pages</h3>
+
+<p>Take a page from each input file and add it to the output PDF.</p>
+
+<p>For example :
+<code>
+    PDF 1   
+        page 1-1    
+        page 1-2    
+    PDF 2   
+        page 2-1    
+        page 2-2    
+    PDF 3   
+        page 3-1    
+        page 3-2
+</code></p>
+
+<p>will result in</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    <span style="color: rgb(153, 0, 0); font-weight: bold;">PDF</span> 
+        page <span style="color: rgb(0, 128, 128);">1</span>-<span style="color: rgb(0, 128, 128);">1</span>    
+        page <span style="color: rgb(0, 128, 128);">2</span>-<span style="color: rgb(0, 128, 128);">1</span>    
+        page <span style="color: rgb(0, 128, 128);">3</span>-<span style="color: rgb(0, 128, 128);">1</span>    
+        page <span style="color: rgb(0, 128, 128);">1</span>-<span style="color: rgb(0, 128, 128);">2</span>    
+        page <span style="color: rgb(0, 128, 128);">2</span>-<span style="color: rgb(0, 128, 128);">2</span>    
+        page <span style="color: rgb(0, 128, 128);">3</span>-<span style="color: rgb(0, 128, 128);">2</span>
+</code></pre>
+
+<p>You make ensure the resulting PDF file will contain pages from the input files, you can check take the same number of pages from each file.</p>
+
+<p>For example:</p>
+
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    <span style="color: rgb(153, 0, 0); font-weight: bold;">PDF</span> <span style="color: rgb(0, 128, 128);">1</span> has <span style="color: rgb(0, 128, 128);">3</span> pages   
+    PDF <span style="color: rgb(0, 128, 128);">2</span> has <span style="color: rgb(0, 128, 128);">5</span> pages   
+    PDF <span style="color: rgb(0, 128, 128);">3</span> has <span style="color: rgb(0, 128, 128);">4</span> pages       
+</code></pre>
+
+<p>The resulting PDF will have first 3 pages from each file, skipping the rest.</p></article>
 </body>
 </html>
