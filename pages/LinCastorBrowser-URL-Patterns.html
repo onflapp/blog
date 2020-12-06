@@ -71,12 +71,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p>Sometimes you may need to replace part of an URL or construct new. In LinCastor Browser you can do this either by <a href="LinCastorBrowser-Plugins.html">writing a plugin extension</a> or by creating new URL from variables.
 You can use any variable that an extension or rules could use.</p>
 
-<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL          =&gt; my-http:<span style="color: rgb(153, 153, 136); font-style: italic;">//myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</span>
-URL_SCHEME   =&gt; my-http
-URL_HOST     =&gt; myhost.domain.com
-URL_PORT     =&gt; <span style="color: rgb(0, 128, 128);">8080</span>
-URL_PATH     =&gt; /mysite/a.html
-URL_PATH_EXT  =&gt; html
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL             =&gt; my-http:<span style="color: rgb(153, 153, 136); font-style: italic;">//myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</span>
+URL_SCHEME      =&gt; my-http
+URL_HOST        =&gt; myhost.domain.com
+URL_PORT        =&gt; <span style="color: rgb(0, 128, 128);">8080</span>
+URL_PATH        =&gt; /mysite/a.html
+URL_PATH_EXT    =&gt; html
+URL_PATH_NOEXT  =&gt; a
+URL_PATH_NAME   =&gt; a.html
+URL_QUERY       =&gt; ?search=blah
+URL_FRAGMENT    =&gt; <span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
+URL_VALUE       =&gt; myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah<span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
+URL_B64VALUE    =&gt; the same <span style="color: rgb(51, 51, 51); font-weight: bold;">as</span> URL_VALUE but decoded using based64
 ...
 </code></pre>
 
