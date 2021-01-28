@@ -71,37 +71,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><a href="https://github.com/onflapp/BookMarkablePlugins">Download Sample Plugins</a>
 Most applications are document-based, which is usually indicated by small file icon in window’s title.</p>
 
-<p><img src="shared/58a878cdee8fbb50-4232aea3-eb6e-47e5-b505-e34449753743.png" alt=""></p>
+<p><img src="shared/ff5858d5986b9772-4232aea3-eb6e-47e5-b505-e34449753743.png" alt=""></p>
 
 <p>These are documents BookMarkable can reference directly with used of the default plugin (Default.scpt).
-Other application, such as Outlook or Safari require application specific plugin to convert selected record or front-most window into a bookmark. These plugins go into BookMarkable “Scripts" folder. The easiest way to get started, is to <a href="https://github.com/onflapp/BookMarkablePlugins">download sample plugins</a> and copy the ones you want to use in.
-Where do I find the Scripts folder
-The scripts folder is under your home folder Library/Application Scripts/com.onflapp.BookMarkable</p>
+Other application, such as Outlook or Safari require application specific plugin to convert selected record or front-most window into a bookmark. These plugins go into BookMarkable “Scripts" folder. The easiest way to get started, is to <a href="https://github.com/onflapp/BookMarkablePlugins">download sample plugins</a> and copy the ones you want to use in.</p>
+
+<p>Where do I find the Scripts folder</p>
+
+<p>The scripts folder is under your home folder Library/Application Scripts/com.onflapp.BookMarkable</p>
 
 <pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">1   switch to Finder
 2   <span><span style="color: rgb(51, 51, 51); font-weight: bold;">select</span> menu <span style="color: rgb(51, 51, 51); font-weight: bold;">Go</span>, <span style="color: rgb(51, 51, 51); font-weight: bold;">then</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">Go</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">to</span> Folder
 <span style="color: rgb(0, 128, 128);">3</span>   type <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> ~/Library/Application Scripts/com.onflapp.BookMarkable
 </span></code></pre>
 
-<p>If this folder doesn’t exist already, create it.
-How do I use plugins</p>
+<p>If this folder doesn’t exist already, create it.</p>
 
-<p><img src="shared/58a878cdee8fbb50-9963feb1-e911-4a1e-97b8-ca9a111ad55c.png" alt=""></p>
+<p>How do I use plugins</p>
 
-<p>Switch to the window of application you want to bookmark. Use ‘Bookmark **** Selection’ menu to invoke the plugin. This is either going to be application specific plugin, if exists, or default plugin otherwise.
-What if it doesn’t work
-Many plugins require ‘application to control your computer’ permission to access application’s state. This permission can be granted by going to System Preferences &gt; Security &amp; Privacy</p>
+<p><img src="shared/ff5858d5986b9772-9963feb1-e911-4a1e-97b8-ca9a111ad55c.png" alt=""></p>
 
-<p><img src="shared/58a878cdee8fbb50-dec9de65-f5d5-421b-99a1-44448949ad02.png" alt=""></p>
+<p>Switch to the window of application you want to bookmark. Use ‘Bookmark **** Selection’ menu to invoke the plugin. This is either going to be application specific plugin, if exists, or default plugin otherwise.</p>
 
-<p>How to make my own plugin
-First of all, you should not be afraid of writing AppleScript scripts. The best way to get started is to go to Preferences &gt; Plugins &gt; Install Plugins . Switch to the app you want to create plugin for, switch back to BookMarkable and choose Create script for the last active App ID.</p>
+<p>What if it doesn’t work</p>
 
-<p><img src="shared/58a878cdee8fbb50-55803434-daff-40b2-8b99-bffeeff17ea4.png" alt=""></p>
+<p>Many plugins require ‘application to control your computer’ permission to access application’s state. This permission can be granted by going to System Preferences &gt; Security &amp; Privacy</p>
+
+<p><img src="shared/ff5858d5986b9772-dec9de65-f5d5-421b-99a1-44448949ad02.png" alt=""></p>
+
+<p>How to make my own plugin</p>
+
+<p>First of all, you should not be afraid of writing AppleScript scripts. The best way to get started is to go to Preferences &gt; Plugins &gt; Install Plugins . Switch to the app you want to create plugin for, switch back to BookMarkable and choose Create script for the last active App ID.</p>
+
+<p><img src="shared/ff5858d5986b9772-55803434-daff-40b2-8b99-bffeeff17ea4.png" alt=""></p>
 
 <p>Edit the script to extract application’s file (as alias) or URL link and pass it to the BookMarkable. This is very application specific. Many applications are actually not AppleScript scriptable at all so you might have to get creative.
-Save the script to ~/Library/Application Scripts/com.onflapp.BookMarkable .
-What’s up with the schemes?
-Some applications, such as Outlook, do not have any useful URL or file to reference. Schemes plugins allow you to create new schemes. Take a look at the com.microsoft.Outlook.scpt which creates outlook-message://messageid URL and open_outlook-message.scpt which handles it. You can also override regular scheme e.g. open_file.scpt allows files to be opened via Finder rather than BookMarkable to bypass its security limitations.</p></article>
+Save the script to ~/Library/Application Scripts/com.onflapp.BookMarkable .</p>
+
+<p>What’s up with the schemes?</p>
+
+<p>Some applications, such as Outlook, do not have any useful URL or file to reference. Schemes plugins allow you to create new schemes. Take a look at the com.microsoft.Outlook.scpt which creates outlook-message://messageid URL and open_outlook-message.scpt which handles it. You can also override regular scheme e.g. open_file.scpt allows files to be opened via Finder rather than BookMarkable to bypass its security limitations.</p></article>
 </body>
 </html>
