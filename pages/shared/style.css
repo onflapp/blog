@@ -1,3 +1,20 @@
+section.text-box-0 {
+  border-radius: 10px; 
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+section.text-box-1 {
+  border: 2px solid lightgray;
+  display: inline-block;
+  padding: 10px;
+}
+
+section.text-box-1 > * {
+  margin: 0;
+  color: gray;
+}
+
 body {
   font-family: "Helvetica", Arial, Geneva, sans-serif;
   font-size: 16px;
@@ -8,7 +25,6 @@ body {
 
 section {
   font-size: smaller;
-  color: gray;
 }
 
 dl {
