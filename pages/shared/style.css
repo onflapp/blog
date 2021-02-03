@@ -1,23 +1,29 @@
+section.text-button {
+  display: inline-block;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: dodgerblue;
+}
+
+section.text-button > * {
+  margin: 0;
+  color: white;
+}
+
+section.text-button > a:link, a:visited {
+  color: white;
+}
+
 section.text-box-0 {
   border-radius: 10px; 
   background-color: aliceblue;
   padding: 10px;
 }
 
-section.text-box-1 {
-  border: 2px solid lightgray;
-  display: inline-block;
-  padding: 10px;
-}
-
-section.text-box-1 > * {
-  margin: 0;
-  color: gray;
-}
-
 body {
   font-family: "Helvetica", Arial, Geneva, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.5;
   margin: 10px;
   color: black;
