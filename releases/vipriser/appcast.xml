@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>VipRiser's Changelog</title>
+    <link>"https://onflapp.github.io/blog/releases/vipriser/appcast.xml"</link>
+    <description>Most recent changes with links to updates.</description>
+    <language>en</language>
+    <item>
+        <title>Version 3.7</title>
+        <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/vipriser/VipRiser.html</sparkle:releaseNotesLink>
+        <pubDate>Sun, 07 Feb 2021 00:45:12 +0000</pubDate>
+        <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.7" length="7764227" type="application/octet-stream" sparkle:dsaSignature="MCwCFB3Z8duc7Egpd+tQ0O2hAgux8d6IAhQ7G7I9VHheWJLn3NJYcH8tKJgcAQ==" />
+    </item>
+</channel>
+</rss>
