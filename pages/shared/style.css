@@ -1,8 +1,8 @@
-section.text-button {
+.cm-action-block {
   padding: 10px;
 }
 
-section.text-button > * {
+.cm-action-block {
   margin: 0;
   color: white;
   display: inline-block;
@@ -12,14 +12,8 @@ section.text-button > * {
   background-color: dodgerblue;
 }
 
-section.text-button > a, a:link, a:visited {
+span.cm-action-block > a, a:link, a:visited {
   color: white;
-}
-
-section.text-box-0 {
-  border-radius: 10px; 
-  background-color: aliceblue;
-  padding: 10px;
 }
 
 body {
@@ -665,3 +659,16 @@ div.mermaidTooltip {
   pointer-events: none;
   z-index: 100;
 }
+    .text-align-center { text-align:center; list-style-position: inside; }
+    .text-align-right { text-align:right; list-style-position: inside; }
+    .text-align-center > ul { display:inline-block; text-align:initial; }
+    .text-align-center > ol { display:inline-block; text-align:initial; }
+    .text-align-right  > ul { display:inline-block; text-align:initial; }
+    .text-align-right  > ol { display:inline-block; text-align:initial; }
+
+    .text-align-center { text-align:center; list-style-position: inside; }
+    .text-align-right { text-align:right; list-style-position: inside; }
+    .text-align-center > ul { display:inline-block; text-align:initial; }
+    .text-align-center > ol { display:inline-block; text-align:initial; }
+    .text-align-right  > ul { display:inline-block; text-align:initial; }
+    .text-align-right  > ol { display:inline-block; text-align:initial; }

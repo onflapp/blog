@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>LinCastor Browser URL patterns and callbacks</title>
+<title>LinCastorBrowser-URL-Patterns</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 <link rel="stylesheet" href="theme/style.css">
@@ -18,16 +18,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQLPZNT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --><header>
+<main>
+
 <nav>
 
 <ul>
 <li>[ <a href="index.html">❖</a> ]</li>
+<li><a href="DNoteIt.html">DNoteIt</a></li>
 <li><a href="LinCastorBrowser.html">LinCastor Browser</a>
 
 <ul>
 <li><a href="Custom-URL-Scheme-or-File-Extension.html">Custom URL Schemas and File Extensions</a></li>
 <li><a href="https://github.com/onflapp/LinCastorBrowserPlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="VipRiserPDFOps.html">VipRiser PDF Ops</a>
 
@@ -35,19 +38,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="Install-Virtual-Printer.html">PDF Print Driver</a></li>
 <li><a href="Create-PDF-Action.html">Create PDF Workflows</a></li>
 <li><a href="Enable-3rd-Party-Automator-Actions.html">Enable 3rd-party Automator Actions</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="BookMarkable.html">BookMarkable</a>
 
 <ul>
 <li><a href="https://github.com/onflapp/BookMarkablePlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="TextSer.html">TextSer</a>
 
 <ul>
 <li><a href="https://github.com/onflapp/TextSerPlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="Support.html">Support</a>
 
@@ -58,31 +61,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="BookMarkable-Support.html">BookMarkable</a></li>
 <li><a href="TextSer-Support.html">TextSer</a></li>
 <li><a href="OnFlApp-Privacy-Policy.html">OnFlApp Privacy Policy</a></li>
-</ul>
+</ul><div></div>
 </li>
-</ul>
+</ul><div></div>
 
 
 </nav>
+
+</main>
 </header>
 <article>
+<main>
+
 <h1>Using Variables</h1>
 
 <p>Sometimes you may need to replace part of an URL or construct new. In LinCastor Browser you can do this either by <a href="LinCastorBrowser-Plugins.html">writing a plugin extension</a> or by creating new URL from variables.
 You can use any variable that an extension or rules could use.</p>
 
-<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL             =&gt; my-http:<span style="color: rgb(153, 153, 136); font-style: italic;">//myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</span>
-URL_SCHEME      =&gt; my-http
-URL_HOST        =&gt; myhost.domain.com
-URL_PORT        =&gt; <span style="color: rgb(0, 128, 128);">8080</span>
-URL_PATH        =&gt; /mysite/a.html
-URL_PATH_EXT    =&gt; html
-URL_PATH_NOEXT  =&gt; a
-URL_PATH_NAME   =&gt; a.html
-URL_QUERY       =&gt; ?search=blah
-URL_FRAGMENT    =&gt; <span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
-URL_VALUE       =&gt; myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah<span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
-URL_B64VALUE    =&gt; the same <span style="color: rgb(51, 51, 51); font-weight: bold;">as</span> URL_VALUE but decoded using based64
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>URL</span>             =&gt; my-http://myhost.domain.com:8080/mysite/a.html?search=blah&lt;span class="cm-hash-tag cm-myanchor"&gt;myanchor&lt;/span&gt;
+<span>URL_SCHEME</span>      =&gt; my-http
+<span>URL_HOST</span>        =&gt; myhost.domain.com
+<span>URL_PORT</span>        =&gt; 8080
+<span>URL_PATH</span>        =&gt; /mysite/a.html
+<span>URL_PATH_EXT</span>    =&gt; html
+<span>URL_PATH_NOEXT</span>  =&gt; a
+<span>URL_PATH_NAME</span>   =&gt; a.html
+<span>URL_QUERY</span>       =&gt; ?search=blah
+<span>URL_FRAGMENT</span>    =&gt; &lt;span class="cm-hash-tag cm-myanchor"&gt;myanchor&lt;/span&gt;
+<span>URL_VALUE</span>       =&gt; myhost.domain.com:8080/mysite/a.html?search=blah&lt;span class="cm-hash-tag cm-myanchor"&gt;myanchor&lt;/span&gt;
+<span>URL_B64VALUE</span>    =&gt; the same as URL_VALUE but decoded using based64
 ...
 </code></pre>
 
@@ -98,8 +105,10 @@ URL_B64VALUE    =&gt; the same <span style="color: rgb(51, 51, 51); font-weight:
 
 <h3>Replacing part of URL</h3>
 
-<p>Some apps are no able to handle standard HTTP or HTTPS links directly and use custom schemes instead. For example, Zoom app needs <em>zoommtg</em>. You can construct new URL by replacing URL_SCHEME (“https") by value “zoommtg" and passing it to the Zoom app to open it.</p>
+<p>Some apps are no able to handle standard HTTP or HTTPS links directly and use custom schemes instead. For example, Zoom app needs <em>zoommtg</em>. You can construct new URL by replacing URL_SCHEME (“https”) by value “zoommtg” and passing it to the Zoom app to open it.</p>
 
-<p><img src="shared/1cda939acdd6a258-d0b4bf035eaa1206c0a30c2f42b55258.png" alt=""></p></article>
+<p><img src="shared/2dbf964826dcea7b-image-19ea9aef2607dfeaea04d35ccbf04e11.png" alt=""></p>
+
+</main></article>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Lincastor Custom URL Handler</title>
+<title>Custom-URL-Handler</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 <link rel="stylesheet" href="theme/style.css">
@@ -18,16 +18,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQLPZNT"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) --><header>
+<main>
+
 <nav>
 
 <ul>
 <li>[ <a href="index.html">❖</a> ]</li>
+<li><a href="DNoteIt.html">DNoteIt</a></li>
 <li><a href="LinCastorBrowser.html">LinCastor Browser</a>
 
 <ul>
 <li><a href="Custom-URL-Scheme-or-File-Extension.html">Custom URL Schemas and File Extensions</a></li>
 <li><a href="https://github.com/onflapp/LinCastorBrowserPlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="VipRiserPDFOps.html">VipRiser PDF Ops</a>
 
@@ -35,19 +38,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="Install-Virtual-Printer.html">PDF Print Driver</a></li>
 <li><a href="Create-PDF-Action.html">Create PDF Workflows</a></li>
 <li><a href="Enable-3rd-Party-Automator-Actions.html">Enable 3rd-party Automator Actions</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="BookMarkable.html">BookMarkable</a>
 
 <ul>
 <li><a href="https://github.com/onflapp/BookMarkablePlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="TextSer.html">TextSer</a>
 
 <ul>
 <li><a href="https://github.com/onflapp/TextSerPlugins">Sample Plugins</a></li>
-</ul>
+</ul><div></div>
 </li>
 <li><a href="Support.html">Support</a>
 
@@ -58,19 +61,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <li><a href="BookMarkable-Support.html">BookMarkable</a></li>
 <li><a href="TextSer-Support.html">TextSer</a></li>
 <li><a href="OnFlApp-Privacy-Policy.html">OnFlApp Privacy Policy</a></li>
-</ul>
+</ul><div></div>
 </li>
-</ul>
+</ul><div></div>
 
 
 </nav>
+
+</main>
 </header>
 <article>
+<main>
+
 <h1>Custom URL handlers</h1>
 
 <p>The LinCastor’s primary job is to wait for an URL request and trigger a handler script which decides what to do next.</p>
 
-<p style="text-align: center;"><img src="shared/4e25b316f7aa098d-screen-shot27859.png" alt=""></p>
+<div class="text-align-center">
+
+<p><img src="shared/e5ff48c020cb47eb-image-099c5b22b2b81387442d9a8aba10f714.png" alt=""></p>
+
+</div>
 
 <h3>What is an URL ‘scheme’</h3>
 
@@ -80,9 +91,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <ol>
 <li>Set title to anything you like.</li>
-<li>Specify a scheme or list of schemes you want to handle. Adding a well known scheme such as http or ftp may ‘steal‘ it from already installed Application –  you should know what you are doing here. Use characters a-z, 0-9and ‘-‘ for custom scheme name (e.g. foo-bar is ok, whereas My.Url is not).</li>
+<li>Specify a scheme or list of schemes you want to handle. Adding a well known scheme such as http or ftp may ‘steal‘ it from already installed Application -  you should know what you are doing here. Use characters a-z, 0-9and ‘-‘ for custom scheme name (e.g. foo-bar is ok, whereas My.Url is not).</li>
 <li>Choose a handler:</li>
-</ol>
+</ol><div></div>
 
 
 <h3>AppleScript</h3>
@@ -96,13 +107,13 @@ end handle_url
 
 <p>The dictionary contains following variables:</p>
 
-<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL          =&gt; my-http:<span style="color: rgb(153, 153, 136); font-style: italic;">//myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</span>
-URL_SCHEME   =&gt; my-http
-URL_HOST     =&gt; myhost.domain.com
-URL_PORT     =&gt; <span style="color: rgb(0, 128, 128);">8080</span>
-URL_PATH     =&gt; /mysite/a.html
-URL_QUERY    =&gt; ?search=blah
-URL_FRAGMENT =&gt; <span style="color: rgb(153, 153, 136); font-style: italic;">#myanchor</span>
+<pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>URL          =<span>&gt; my-http://myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah&lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
+<span>URL_SCHEME   =<span>&gt; my-http</span></span>
+<span>URL_HOST     =<span>&gt; myhost.domain.com</span></span>
+<span>URL_PORT     =<span>&gt; <span style="color: rgb(0, 128, 128);">8080</span></span></span>
+<span>URL_PATH     =<span>&gt; /mysite/a.html</span></span>
+<span>URL_QUERY    =<span>&gt; ?search=blah</span></span>
+<span>URL_FRAGMENT =<span>&gt; &lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
 </code></pre>
 
 <p>Only URL parts that are parseable will appear in the dictionary.
@@ -129,12 +140,14 @@ open <span>-a</span> Firefox <span style="color: rgb(0, 128, 128);">$URL</span>
 
 <p>The script must exit with value of 0 when successful or non-zero value for an error.</p>
 
-<p>Application – built-in handler</p>
+<p>Application - built-in handler</p>
 
 <p>The handler will pass the URL to any application you specify here. Please note that not all applications know how to open an arbitrary URL, therefore it makes the most sense to use this handler in conjunction with  the remove prefix- setting.
 The way this works is that you register well known scheme but prefix it with your own prefix.</p>
 
 <p>For example, add chrome-http and associate it with application Google Chrome.
-When you request an url with the chrome- prefix (e.g. chrome-<a href="http://gmail.google.com">http://gmail.google.com</a>), it will be passed to the Chrome application with the prefix removed. This allows you to control which application is used to open a particular URL.</p></article>
+When you request an url with the chrome- prefix (e.g. chrome-<a href="http://gmail.google.com">http://gmail.google.com</a>), it will be passed to the Chrome application with the prefix removed. This allows you to control which application is used to open a particular URL.</p>
+
+</main></article>
 </body>
 </html>
