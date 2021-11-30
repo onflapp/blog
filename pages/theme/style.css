@@ -31,6 +31,10 @@ body > article {
     font-size: smaller !important;
     margin: 0 !important;
   }
+
+  .cm-container-block.cm-subnav {
+    border-radius: 0;
+  }
 }
 
 body > footer {

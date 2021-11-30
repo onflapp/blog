@@ -8,7 +8,7 @@
     <item>
         <title>Version 3.8</title>
         <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/vipriser/VipRiser.html</sparkle:releaseNotesLink>
-        <pubDate>Tue, 30 Nov 2021 17:42:26 +0000</pubDate>
+        <pubDate>Tue, 30 Nov 2021 19:20:24 +0000</pubDate>
         <enclosure url="https://onflapp.github.io/blog/releases/vipriser/VipRiser.zip" sparkle:version="3.8" length="6910910" type="application/octet-stream" sparkle:dsaSignature="" />
     </item>
 </channel>
