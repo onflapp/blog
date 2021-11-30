@@ -1,7 +1,6 @@
-pre code {
+pre {
   background-color: #E6E6E6;
   font-size: 9px;
-  border-left: 5px solid gray;
 }
 
 .cm-action-block {
@@ -20,7 +19,6 @@ pre code {
 
 .cm-container-block.cm-subnav {
   font-size: 13px;
-  padding: 10px;
 }
 
 .cm-container-block.cm-subnav > * {
