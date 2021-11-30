@@ -102,14 +102,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>Executes handle_run method with a dictionary as argument.</p>
 
-<pre style="background-color: rgb(230, 230, 230); font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>on</span> handle_url(arg)
+<pre style="border-width: 1px 1px 1px 2px; border-style: solid; border-color: lightgray lightgray lightgray black; font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>on</span> handle_url(arg)
     display dialog <span style="color: rgb(221, 17, 68);">"handle url: "</span> &amp; |URL| <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> args
 end handle_url
 </code></pre>
 
 <p>The dictionary contains following variables:</p>
 
-<pre style="background-color: rgb(230, 230, 230); font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>URL          =<span>&gt; my-http://myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah&lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
+<pre style="border-width: 1px 1px 1px 2px; border-style: solid; border-color: lightgray lightgray lightgray black; font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>URL          =<span>&gt; my-http://myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah&lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
 <span>URL_SCHEME   =<span>&gt; my-http</span></span>
 <span>URL_HOST     =<span>&gt; myhost.domain.com</span></span>
 <span>URL_PORT     =<span>&gt; <span style="color: rgb(0, 128, 128);">8080</span></span></span>
@@ -123,7 +123,7 @@ There is also special variable called URL_VALUE, it will contain anything after 
 The url query parameters are parsed in following way:
 ?search=blah&amp;flag=2 would become</message></p>
 
-<pre style="background-color: rgb(230, 230, 230); font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL_QUERY_SEARCH =&gt; blah
+<pre style="border-width: 1px 1px 1px 2px; border-style: solid; border-color: lightgray lightgray lightgray black; font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL_QUERY_SEARCH =&gt; blah
 URL_QUERY_FLAG =&gt; <span style="color: rgb(0, 128, 128);">2</span>
 </code></pre>
 
@@ -135,7 +135,7 @@ URL_QUERY_FLAG =&gt; <span style="color: rgb(0, 128, 128);">2</span>
 
 <p>Executes a shell script. The variable names are the same as for the AppleScript handler except that they’ll be passed to the script in form of environmental variables.</p>
 
-<pre style="background-color: rgb(230, 230, 230); font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span style="color: rgb(153, 153, 153); font-weight: bold;">#!/bin/bash</span>
+<pre style="border-width: 1px 1px 1px 2px; border-style: solid; border-color: lightgray lightgray lightgray black; font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span style="color: rgb(153, 153, 153); font-weight: bold;">#!/bin/bash</span>
 open <span>-a</span> Firefox <span style="color: rgb(0, 128, 128);">$URL</span>
 <span style="color: rgb(51, 51, 51); font-weight: bold;">exit</span> <span style="color: rgb(0, 128, 128);">0</span>
 </code></pre>
