@@ -4,6 +4,7 @@
 <title>VipRiser Support</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <meta http-equiv="content-language" content="en"></meta>
+<meta name="description" content="VipRiser virtual PDF printer support. Make sure it is running and 3rd party workflow actions are enabled in Automator"></meta>
 <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 <link rel="stylesheet" href="theme/style.css">
 <!-- Google Tag Manager -->
@@ -75,49 +76,107 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <article>
 <main>
 
+<section class="cm-container-block cm-subnav">
+
+<p>How to:</p>
+
+<ul>
+<li><a href="Install-Virtual-Printer.html">install virtual printer</a></li>
+<li><a href="Use-Virtual-Printer.html">print from app</a></li>
+<li><a href="Action-Menu-for-PDFs.html">use it as service</a></li>
+</ul><div></div>
+
+
+</section>
+
 <h1>VipRiser Support</h1>
 
-<p>NOTE: You may also want to check <a href="Support.html">general support</a> and ‘<a href="https://onflapp.wordpress.com/support/app-cannot-be-opened/">why doesn’t my app open</a>’ page .</p>
+<p>VipRiser has tree parts:</p>
 
-<h3>Q: The VipRiser printer stays in the ‘paused’ state</h3>
+<ul>
+<li>virtual <strong>PDF printer</strong> which appers as your regular printer</li>
+<li><strong>helper app</strong> for configuring the printing process and executing workflows</li>
+<li>collection of <strong>Automator’s actions</strong> to <a href="Enhance-VipRiser-With-PDF-Actions.html">customize your workflows</a></li>
+</ul><div></div>
 
-<p>A: Make sure the VipRiser.app is running while you print.</p>
 
-<h3>Q: When printing without VipRiser app already running, the app starts up but crashes or produces unexpected result</h3>
+<p>The helper app appears as little icon in your menu and will show up any time you print a document (unless you configure it otherwise).</p>
 
-<p>A: Make sure there is only one VipRiser.app on your system. The printer driver will launch the first app it will find, which may be the wrong version.</p>
+<p><img src="shared/f814ba87819cd3d5-image-d8470117fede136d82dc3d00386c12ab-w507.png" width="507" alt=""></p>
+
+<hr class="cm-hr cm-dash">
+
+
+<h3>Q: VipRisser doesn’t launch</h3>
+
+<p>As VipRiser is not distributed trought Apple’s app store, you may have to <a href="Open-3rd-Part-Apps.html">verify the app</a> is from knowns developer. You can get to preferences</p>
+
+<hr class="cm-hr cm-dash">
+
+
+<h3>Q: Custom workflows do not work</h3>
+
+<p>Make sure you installed <a href="VipRiserPDFOps.html">VipRiserPDFOps</a> properly and did <a href="Enable-3rd-Party-Automator-Actions.html">enable 3rd party automator actions</a> in Automator app.</p>
+
+<hr class="cm-hr cm-dash">
+
+
+<h3>Q: VipRiser is running but crashes or produces unexpected result</h3>
+
+<p>Make sure there is only one VipRiser.app on your system and install it in your <em>Applications</em> folder. The printer driver will launch the first app it finds, which might be wrong version.</p>
+
+<hr class="cm-hr cm-dash">
+
+
+<h3>Q: I’m getting poor output quality</h3>
+
+<p>Change default image resolution from 72PDI</p>
+
+<p><img src="shared/f814ba87819cd3d5-image-68122256b326fc1a852a0e8f29366a35-w320.png" width="320" alt=""></p>
+
+<p>NOTE: This is application specific setting and may be configured in ‘Printer Features’ section. If you really need to change it for all application, you can always edit the the PPD file manually</p>
+
+<p><code>/Library/Printers/PPDs/Contents/Resources/vipriser.ppd</code></p>
+
+<p>Make sure you turn off <em>image compression</em> in VipRiser’s configuration.
+This is needed only if you print to folder.</p>
+
+<p><img src="shared/f814ba87819cd3d5-image-b13c3f7c9eab9b7763bffb432140a95e-w320.png" width="320" alt=""></p>
+
+<hr class="cm-hr cm-dash">
+
+
+<h3>Q: VipRiser printer is in ‘paused’ state</h3>
+
+<p>Make sure the VipRiser.app is running while you print.</p>
+
+<hr class="cm-hr cm-dash">
+
 
 <h3>Q: How do I uninstall it</h3>
 
-<p>A: Execute the uninstall script from the VipRiser menu.</p>
+<p>Execute the <em>Uninstall Print Driver</em> script from VipRiser’s menu. Quit and remove the helpper app.</p>
 
-<h3>Q: The VipRiser doesn’t show up even after I install the driver</h3>
+<hr class="cm-hr cm-dash">
 
-<p>A: You can add it in the Terminal:</p>
+
+<h3>Q: the virtual printer doesn’t show up even after I install the driver</h3>
+
+<p>You can add it using Terminal:</p>
 
 <pre><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    lpadmin -E -D <span style="color: rgb(221, 17, 68);">"Print to VipRiser"</span> -p <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span> -v <span style="color: rgb(221, 17, 68);">"vipriser:/"</span> -P /Library/Printers/PPDs/Contents/Resources/vipriser.ppd -o printer-<span style="color: rgb(51, 51, 51); font-weight: bold;">is</span>-shared=<span style="color: rgb(51, 51, 51); font-weight: bold;">false</span>   
     cupsenable <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>  
     cupsaccept <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>    
 </code></pre>
 
-<p>Change default image resolution from 72PDI</p>
 
-<p><img src="shared/f814ba87819cd3d5-image-91ccdcf7b40c237a4703b192c5c2619f.png" alt=""></p>
 
-<p>This is application specific setting and may be configured in ‘Printer Features’ section. If you really need to change it for all application, you can always edit the the PPD file manually
-/Library/Printers/PPDs/Contents/Resources/vipriser.ppd
-Turn off image compression in ‘Folder’ section of VipRiser’s configuration.
-This is needed only if you print to folder.</p>
+<hr class="cm-hr cm-dash">
 
-<p><img src="shared/f814ba87819cd3d5-image-a05ef6571bebd27da348a67f6548c5b7.png" alt=""></p>
 
 <h3>Q: Using custom PPD</h3>
 
-<p>A: You can specify custom PPD when you install the VipRiser printer in the ‘Printer &amp; Scanner’ system preferences.</p>
-
-<h3>Q: Eliminate the numerical prefix</h3>
-
-<p>A: Either change the configuration in ‘Preferences Panel’ under the ‘…’ tab or create a custom step that saves the PDF under name of your choosing.</p>
+<p>You can specify custom PPD when you install VipRiser printer or  in the <em>Printer &amp; Scanner</em> system preferences.</p>
 
 </main></article>
 </body>
