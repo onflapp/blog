@@ -1,7 +1,9 @@
 pre {
   border: 1px solid lightgray;
-  border-left: 2px solid black;
+  background-color: #EEEEEE;
   font-size: 9px;
+  padding: 5px;
+  overflow: hidden;
 }
 
 .cm-action-block {
@@ -12,41 +14,63 @@ pre {
   margin: 0;
   color: white;
   display: inline-block;
-  padding: 15px;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
   font-weight: bold;
   background-color: dodgerblue;
 }
 
+.cm-container-block.cm-info {
+  border: 1px solid dodgerblue;
+  border-left: 5px solid dodgerblue;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.text-align-center .cm-container-block.cm-info {
+  width: 300px;
+  margin: auto;
+  border: 1px solid dodgerblue;
+  padding: 5px;
+}
+
 .cm-container-block.cm-box {
   border: 1px solid lightgray;
-  border-left: 2px solid black;
+  border-left: 5px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.cm-container-block.cm-subnav {
-  font-size: 13px;
+.cm-container-block.cm-links {
+  font-size: 14px;
+  color: lightgray;
+  border-bottom: 1px solid lightgray;
 }
 
-.cm-container-block.cm-subnav > * {
+.cm-container-block.cm-links > * {
   margin: 0;
 }
 
-.cm-container-block.cm-subnav li {
+.cm-container-block.cm-links li {
   display: inline-block;
   padding-right: 15px;
 }
 
-.cm-container-block.cm-subnav ul {
+.cm-container-block.cm-links ul {
   display: inline-block;
   padding-left: 0;
 }
 
-.cm-container-block.cm-subnav p {
+.cm-container-block.cm-links strong {
   display: inline-block;
-  padding: 5px;
-  margin-right: 10px;
+  padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 2px;
+  padding-top: 2px;
   background-color: black;
-  color: lightgray;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 span.cm-action-block > a, a:link, a:visited {

@@ -76,16 +76,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <article>
 <main>
 
-<section class="cm-container-block cm-subnav">
+<section class="cm-container-block cm-links">
 
-<p>How to:</p>
-
-<ul>
-<li><a href="Install-Virtual-Printer.html">install virtual printer</a></li>
-<li><a href="Use-Virtual-Printer.html">print from app</a></li>
-<li><a href="Action-Menu-for-PDFs.html">use it as service</a></li>
-</ul><div></div>
-
+<p><strong>How to:</strong> <a href="Install-Virtual-Printer.html">install virtual printer</a> | <a href="Use-Virtual-Printer.html">print from app</a> | <a href="Action-Menu-for-PDFs.html">use it as service</a></p>
 
 </section>
 
@@ -104,31 +97,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p><img src="shared/f814ba87819cd3d5-image-d8470117fede136d82dc3d00386c12ab-w507.png" width="507" alt=""></p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: VipRiser doesn’t launch</h3>
+<h2>Q: VipRiser doesn’t launch</h2>
 
 <p>As VipRiser is not distributed trought Apple’s app store, you may have to <a href="Open-3rd-Part-Apps.html">verify the app</a> is from knowns developer. You can get to preferences</p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: Custom workflows do not work</h3>
+<h2>Q: Custom workflows do not work</h2>
 
 <p>Make sure you installed <a href="VipRiserPDFOps.html">VipRiserPDFOps</a> properly and did <a href="Enable-3rd-Party-Automator-Actions.html">enable 3rd party automator actions</a> in Automator app.</p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: VipRiser is running but crashes or produces unexpected result</h3>
+<h2>Q: VipRiser is running but crashes or produces unexpected result</h2>
 
 <p>Make sure there is only one VipRiser.app on your system and install it in your <em>Applications</em> folder. The printer driver will launch the first app it finds, which might be wrong version.</p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: I’m getting poor output quality</h3>
+<h2>Q: I’m getting poor output quality</h2>
 
 <p>Change default image resolution from 72PDI</p>
 
@@ -143,38 +124,24 @@ This is needed only if you print to folder.</p>
 
 <p><img src="shared/f814ba87819cd3d5-image-b13c3f7c9eab9b7763bffb432140a95e-w320.png" width="320" alt=""></p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: VipRiser printer is in ‘paused’ state</h3>
+<h2>Q: VipRiser printer is in ‘paused’ state</h2>
 
 <p>Make sure the VipRiser.app is running while you print.</p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: How do I uninstall it</h3>
+<h2>Q: How do I uninstall it</h2>
 
 <p>Execute the <em>Uninstall Print Driver</em> script from VipRiser’s menu. Quit and remove the helpper app.</p>
 
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: the virtual printer doesn’t show up even after I install the driver</h3>
+<h2>Q: the virtual printer doesn’t show up even after I install the driver</h2>
 
 <p>You can add it using Terminal:</p>
 
-<pre style="border-width: 1px 1px 1px 2px; border-style: solid; border-color: lightgray lightgray lightgray black; font-size: 9px;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    lpadmin -E -D <span style="color: rgb(221, 17, 68);">"Print to VipRiser"</span> -p <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span> -v <span style="color: rgb(221, 17, 68);">"vipriser:/"</span> -P /Library/Printers/PPDs/Contents/Resources/vipriser.ppd -o printer-<span style="color: rgb(51, 51, 51); font-weight: bold;">is</span>-shared=<span style="color: rgb(51, 51, 51); font-weight: bold;">false</span>   
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    lpadmin -E -D <span style="color: rgb(221, 17, 68);">"Print to VipRiser"</span> -p <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span> -v <span style="color: rgb(221, 17, 68);">"vipriser:/"</span> -P /Library/Printers/PPDs/Contents/Resources/vipriser.ppd -o printer-<span style="color: rgb(51, 51, 51); font-weight: bold;">is</span>-shared=<span style="color: rgb(51, 51, 51); font-weight: bold;">false</span>   
     cupsenable <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>  
     cupsaccept <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>    
 </code></pre>
 
-
-
-<hr class="cm-hr cm-dash">
-
-
-<h3>Q: Using custom PPD</h3>
+<h2>Q: Using custom PPD</h2>
 
 <p>You can specify custom PPD when you install VipRiser printer or  in the <em>Printer &amp; Scanner</em> system preferences.</p>
 
