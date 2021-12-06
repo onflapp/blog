@@ -6,10 +6,10 @@
 <description>Most recent changes with links to updates.</description>
 <language>en</language>
 <item>
-<title>Version 3.7</title>
+<title>Version 4.0</title>
 <sparkle:releaseNotesLink>https://onflapp.github.io/blog/releases/lincastor/LinCastor.html</sparkle:releaseNotesLink>
-<pubDate>Sun, 07 Feb 2021 16:43:54 +0000</pubDate>
-<enclosure url="https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip" sparkle:version="3.7" length="4293168" type="application/octet-stream" sparkle:dsaSignature="MCwCFGoUuLuGA/kgy8i9ECHI93L+Z3YVAhR5iA1e73pzszlx7nKD6WVPFVF/zQ==" />
+<pubDate>Mon, 06 Dec 2021 14:23:15 +0000</pubDate>
+<enclosure url="https://onflapp.github.io/blog/releases/lincastor/LinCastor.zip" sparkle:version="4.0" length="2550312" type="application/octet-stream" sparkle:dsaSignature="MCwCFCWxc3pdPQz14Z5zDF92k1oxDPIYAhQ0U2U92SvmasekXGSJuD3IKW+dow==" />
 </item>
 </channel>
 </rss>
