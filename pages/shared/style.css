@@ -43,7 +43,6 @@ pre {
 
 .cm-container-block.cm-links {
   font-size: 14px;
-  color: lightgray;
   border-bottom: 1px solid lightgray;
 }
 
@@ -64,13 +63,14 @@ pre {
 .cm-container-block.cm-links strong {
   display: inline-block;
   padding: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 2px;
   padding-top: 2px;
   background-color: black;
   font-weight: normal;
   font-size: 12px;
+  color: lightgray;
 }
 
 span.cm-action-block > a, a:link, a:visited {

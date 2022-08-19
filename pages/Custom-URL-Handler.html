@@ -102,43 +102,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <p>Executes handle_run method with a dictionary as argument.</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>on</span> handle_url(arg)
-    display dialog <span style="color: rgb(221, 17, 68);">"handle url: "</span> &amp; |URL| <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> args
-end handle_url
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>on</span> handle_url(arg)  
+    display dialog <span style="color: rgb(221, 17, 68);">"handle url: "</span> &amp; |URL| <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> args   
+end handle_url  
+`<span></span>``<span>     
+
+The dictionary contains following variables:    
+</span></code></pre>
+
+<p>URL          =&gt; my-<a href="http://myhost.domain.com:8080/mysite/a.html?search=blah#myanchor">http://myhost.domain.com:8080/mysite/a.html?search=blah#myanchor</a>
+URL_SCHEME   =&gt; my-http
+URL_HOST     =&gt; myhost.domain.com
+URL_PORT     =&gt; 8080
+URL_PATH     =&gt; /mysite/a.html
+URL_QUERY    =&gt; ?search=blah
+URL_FRAGMENT =&gt; <span class="cm-hash-tag cm-myanchor">myanchor</span></p>
+
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">Only URL parts that are parseable will appear <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> the dictionary.    
+There <span style="color: rgb(51, 51, 51); font-weight: bold;">is</span> also special variable called URL_VALUE, it will contain anything after ‘:’ character. This <span style="color: rgb(51, 51, 51); font-weight: bold;">is</span> especially useful <span style="color: rgb(51, 51, 51); font-weight: bold;">for</span> URLs that <span style="color: rgb(51, 51, 51); font-weight: bold;">do</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">not</span> comfort to the URL spec e.g. <span style="color: rgb(0, 128, 128);">message</span>:&lt;MESSAGE ID&gt; urls used <span style="color: rgb(51, 51, 51); font-weight: bold;">by</span> the Apple Mail.    
+The url query parameters are parsed <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> following <span style="color: rgb(0, 128, 128);">way</span>:   
+?search=blah&amp;flag=<span style="color: rgb(0, 128, 128);">2</span> would become    
 </code></pre>
 
-<p>The dictionary contains following variables:</p>
+<p>URL_QUERY_SEARCH =&gt; blah
+URL_QUERY_FLAG =&gt; 2</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span>URL          =<span>&gt; my-http://myhost.domain.com:<span style="color: rgb(0, 128, 128);">8080</span>/mysite/a.html?search=blah&lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
-<span>URL_SCHEME   =<span>&gt; my-http</span></span>
-<span>URL_HOST     =<span>&gt; myhost.domain.com</span></span>
-<span>URL_PORT     =<span>&gt; <span style="color: rgb(0, 128, 128);">8080</span></span></span>
-<span>URL_PATH     =<span>&gt; /mysite/a.html</span></span>
-<span>URL_QUERY    =<span>&gt; ?search=blah</span></span>
-<span>URL_FRAGMENT =<span>&gt; &lt;span class=<span style="color: rgb(221, 17, 68);">"cm-hash-tag cm-myanchor"</span>&gt;myanchor&lt;/span&gt;</span></span>
-</code></pre>
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">E.i. URL_QUERY_ + parameter name. Note the upper case of the parameter name.    
 
-<p>Only URL parts that are parseable will appear in the dictionary.
-There is also special variable called URL_VALUE, it will contain anything after ‘:’ character. This is especially useful for URLs that do not comfort to the URL spec e.g. message:<message id=""> urls used by the Apple Mail.
-The url query parameters are parsed in following way:
-?search=blah&amp;flag=2 would become</message></p>
+The <span><span style="color: rgb(51, 51, 51); font-weight: bold;">handler</span> must <span style="color: rgb(51, 51, 51); font-weight: bold;">return</span> <span style="color: rgb(0, 128, 128);">1</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">when</span> successful <span style="color: rgb(51, 51, 51); font-weight: bold;">or</span> <span style="color: rgb(0, 128, 128);">0</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">case</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> an error. 
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">URL_QUERY_SEARCH =&gt; blah
-URL_QUERY_FLAG =&gt; <span style="color: rgb(0, 128, 128);">2</span>
-</code></pre>
+### Shell Script    
 
-<p>E.i. URL_QUERY_ + parameter name. Note the upper case of the parameter name.</p>
+Executes a shell script. The variable <span style="color: rgb(51, 51, 51); font-weight: bold;">names</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">are</span> the same <span style="color: rgb(51, 51, 51); font-weight: bold;">as</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">for</span> the AppleScript <span style="color: rgb(51, 51, 51); font-weight: bold;">handler</span> <span style="color: rgb(51, 51, 51); font-weight: bold;">except</span> that they’ll be passed <span style="color: rgb(51, 51, 51); font-weight: bold;">to</span> the script <span style="color: rgb(51, 51, 51); font-weight: bold;">in</span> form <span style="color: rgb(51, 51, 51); font-weight: bold;">of</span> environmental <span style="color: rgb(51, 51, 51); font-weight: bold;">variables</span>.   
+</span></code></pre>
 
-<p>The handler must return 1 when successful or 0 in case of an error.</p>
+<h1>!/bin/bash</h1>
 
-<h3>Shell Script</h3>
-
-<p>Executes a shell script. The variable names are the same as for the AppleScript handler except that they’ll be passed to the script in form of environmental variables.</p>
-
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"><span style="color: rgb(153, 153, 153); font-weight: bold;">#!/bin/bash</span>
-open <span>-a</span> Firefox <span style="color: rgb(0, 128, 128);">$URL</span>
-<span style="color: rgb(51, 51, 51); font-weight: bold;">exit</span> <span style="color: rgb(0, 128, 128);">0</span>
-</code></pre>
+<p>open -a Firefox $URL
+exit 0
+ ```</p>
 
 <p>The script must exit with value of 0 when successful or non-zero value for an error.</p>
 

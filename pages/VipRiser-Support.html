@@ -78,7 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="cm-container-block cm-links">
 
-<p><strong>How to:</strong> <a href="Install-Virtual-Printer.html">install virtual printer</a> | <a href="Use-Virtual-Printer.html">print from app</a> | <a href="Action-Menu-for-PDFs.html">use it as service</a></p>
+<p><strong>How to:</strong> <a href="Install-Virtual-Printer.html">install virtual printer</a> / <a href="Use-Virtual-Printer.html">print from app</a> / <a href="Action-Menu-for-PDFs.html">use it as service</a></p>
 
 </section>
 
@@ -136,9 +136,9 @@ This is needed only if you print to folder.</p>
 
 <p>You can add it using Terminal:</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    lpadmin -E -D <span style="color: rgb(221, 17, 68);">"Print to VipRiser"</span> -p <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span> -v <span style="color: rgb(221, 17, 68);">"vipriser:/"</span> -P /Library/Printers/PPDs/Contents/Resources/vipriser.ppd -o printer-<span style="color: rgb(51, 51, 51); font-weight: bold;">is</span>-shared=<span style="color: rgb(51, 51, 51); font-weight: bold;">false</span>   
-    cupsenable <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>  
-    cupsaccept <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>    
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">    lpadmin -E -D <span style="color: rgb(221, 17, 68);">"Print to VipRiser"</span> -p <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span> -v <span style="color: rgb(221, 17, 68);">"vipriser:/"</span> -P /Library/Printers/PPDs/Contents/Resources/vipriser.ppd -o printer-<span style="color: rgb(51, 51, 51); font-weight: bold;">is</span>-shared=<span style="color: rgb(51, 51, 51); font-weight: bold;">false</span>       
+    cupsenable <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>      
+    cupsaccept <span style="color: rgb(221, 17, 68);">"Print_to_VipRiser"</span>      
 </code></pre>
 
 <h2>Q: Using custom PPD</h2>

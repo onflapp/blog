@@ -88,23 +88,23 @@ For example, https-firefox://www.wikipedia.org will launch the link with Firefox
 
 <p>lookup text in LinCastor. This is the same as selectiong a text and invoking lookup using service menu or using dialog.</p>
 
-<p>examples:
-<code>
- lc://lookup?text=hello
-</code></p>
+<p>examples:</p>
+
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> lc:<span style="color: rgb(153, 153, 136); font-style: italic;">//lookup?text=hello </span>
+</code></pre>
 
 <p>lc://open</p>
 
 <p>open link in LinCastor Browser</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span>?app_keywords=<span style="color: rgb(51, 51, 51); font-weight: bold;">ref</span>&amp;url=https:<span style="color: rgb(0, 153, 38);">//www</span>.wikipedia.org
- <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span><span style="color: rgb(0, 153, 38);">/http:/</span><span style="color: rgb(0, 153, 38);">/www.wikipedia.org
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span>?app_keywords=<span style="color: rgb(51, 51, 51); font-weight: bold;">ref</span>&amp;url=https:<span style="color: rgb(0, 153, 38);">//www</span>.wikipedia.org   
+ <span style="color: rgb(51, 51, 51); font-weight: bold;">lc</span>:<span style="color: rgb(0, 153, 38);">//open</span><span style="color: rgb(0, 153, 38);">/http:/</span><span style="color: rgb(0, 153, 38);">/www.wikipedia.org 
 </span></code></pre>
 
 <p>Alternative is to use http scheme. This is sometimes necessary for applications which will not recognize lc:// (e.g. MS Word or MS Excel).</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open/http://www.wikipedia.org</span>
- http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open?url=http://www.wikipedia.org</span>
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);"> http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open/http://www.wikipedia.org    </span>
+ http:<span style="color: rgb(153, 153, 136); font-style: italic;">//lc.open?url=http://www.wikipedia.org    </span>
 </code></pre>
 
 <p>Bookmarklets</p>
@@ -113,7 +113,7 @@ For example, https-firefox://www.wikipedia.org will launch the link with Firefox
 
 <p>For example:</p>
 
-<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">javascript:function<span style="color: rgb(0, 128, 128);">%20x</span>()<span style="color: rgb(0, 128, 128);">%7Bwindow</span>.location=<span style="color: rgb(221, 17, 68);">'lc://open?url='</span>+escape(document.URL);<span style="color: rgb(0, 128, 128);">%7Dx</span>();
+<pre style="border: 1px solid lightgray; background-color: rgb(238, 238, 238); font-size: 9px; padding: 5px; overflow: hidden;"><code style="display: block; overflow-x: auto; padding: 0.5em; color: rgb(51, 51, 51);">javascript:function<span style="color: rgb(0, 128, 128);">%20x</span>()<span style="color: rgb(0, 128, 128);">%7Bwindow</span>.location=<span style="color: rgb(221, 17, 68);">'lc://open?url='</span>+escape(document.URL);<span style="color: rgb(0, 128, 128);">%7Dx</span>();   
 </code></pre>
 
 <p>will pass the current document URL to the LinCastor Browser.</p>
